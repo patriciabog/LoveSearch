@@ -12,6 +12,8 @@ const getDataApi = () => {
               id: eachContact.login.uuid,
               gender: eachContact.gender,
               email: eachContact.email,
+              country: eachContact.location.country,
+              phone: eachContact.phone,
            }
         });
         return cleanData;

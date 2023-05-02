@@ -1,4 +1,5 @@
 import { Route, Routes, matchPath, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function ContactDetail({ contactFiltered }) {
  const { pathname } = useLocation()
@@ -22,11 +23,14 @@ function ContactDetail({ contactFiltered }) {
         <h4 class="card__title">
           {contactFind.name} {contactFind.lastname}
         </h4>
-        <p className="card__description">
-          {contactFind.city} / {contactFind.gender}
-        </p>
-    
+        <p className="card__description">{`Gender: ${contactFind.gender}`}</p>
+        <p className="card__description">{`Country: ${contactFind.country}`}</p>
+        <p className="card__description">{`City: ${contactFind.city}`}</p>
+        <p className="card__description">{`Age: ${contactFind.age}`}</p>
+        <p className="card__description">{`Email: ${contactFind.email}`}</p>
+        <p className="card__description">{`Phone: ${contactFind.phone}`}</p>
     </li>
+    <Link className="link"  to="/"> 👈🏻Back</Link>
     </>
  );
 
