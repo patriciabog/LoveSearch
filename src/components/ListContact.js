@@ -7,7 +7,7 @@ function ListContact({ contactList }) {
     });
   return (
      <section className="list">
-        <ul className="cards">{dataHtml}</ul>
+        <ul className="list__cards">{dataHtml}</ul>
      </section>
   );
     

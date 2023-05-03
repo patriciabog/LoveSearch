@@ -15,10 +15,10 @@ function Contact({ eachContact }) {
              <h4 className="card__title">
                 {eachContact.name} {eachContact.lastname}
              </h4>
-            <p className="card__description">
-                {eachContact.city}
-                {eachContact.gender}  
+            <p className="card__desc">
+                {eachContact.country} / {eachContact.gender} 
             </p>
+           
               </li>
          </Link>
     );
