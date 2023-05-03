@@ -11,26 +11,27 @@ function ContactDetail({ contactFiltered }) {
 
  return (
     <>
-    <h2>Profile Information</h2>
-   <li className="card">
+     <h2 className='subtitle'>Profile Information</h2>
+      <Link className="back"  to="/">Back</Link>
+     <li className="contact">
         <img
-          className="card__img"
+          className="contact__img"
           //dentro de llaves ponemos la propiedad imagen del objeto
           src={contactFind.image}
           alt="Foto de Francisco Korth"
           title="Foto de Francisco Korth"
         ></img>
-        <h4 class="card__title">
-          {contactFind.name} {contactFind.lastname}
-        </h4>
-        <p className="card__description">{`Gender: ${contactFind.gender}`}</p>
-        <p className="card__description">{`Country: ${contactFind.country}`}</p>
-        <p className="card__description">{`City: ${contactFind.city}`}</p>
-        <p className="card__description">{`Age: ${contactFind.age}`}</p>
-        <p className="card__description">{`Email: ${contactFind.email}`}</p>
-        <p className="card__description">{`Phone: ${contactFind.phone}`}</p>
-    </li>
-    <Link className="link"  to="/">Back</Link>
+        <h4 className="contact__title">
+            {contactFind.name} {contactFind.lastname}
+         </h4>
+         <p className="contact__description">{`Gender: ${contactFind.gender}`}</p>
+         <p className="contact__description">{`Country: ${contactFind.country}`}</p>
+         <p className="contact__description">{`City: ${contactFind.city}`}</p>
+         <p className="contact__description">{`Age: ${contactFind.age}`}</p>
+         <p className="contact__description">{`Email: ${contactFind.email}`}</p>
+         <p className="contact__description">{`Phone: ${contactFind.phone}`}</p>
+       </li>
+   
     </>
  );
 

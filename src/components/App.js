@@ -6,6 +6,7 @@ import ListContact from './ListContact';
 import Filters from './Filters';
 import { Route, Routes, matchPath } from 'react-router-dom';
 import ContactDetail from './ContactDetail';
+import heart from '../images/heart.png';
 
 
 
@@ -62,7 +63,9 @@ const handleFilterContact = (value) => {
   /* HTML */
   return (
   <div className="main">
-    <h1 className='title'>Find people that can match with you!</h1>
+    <h1 className='title'>Find people that can match with you!
+   <img className='heart' src={heart} alt="heart" />
+   </h1>
 
        <main>
        <Routes>

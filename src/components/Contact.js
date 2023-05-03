@@ -16,7 +16,10 @@ function Contact({ eachContact }) {
                 {eachContact.name} {eachContact.lastname}
              </h4>
             <p className="card__desc">
-                {eachContact.country} / {eachContact.gender} 
+                {eachContact.country} 
+            </p>
+            <p className="card__desc">
+              {eachContact.gender} 
             </p>
            
               </li>
