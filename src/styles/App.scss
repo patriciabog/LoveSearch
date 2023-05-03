@@ -1,1 +1,10 @@
 /* Aquí van tus estilos */
+@import 'core/reset';
+@import 'layout/main';
+@import 'layout/header';
+@import 'layout/form';
+
+
+.main {
+    background:#FEF2F2;
+}

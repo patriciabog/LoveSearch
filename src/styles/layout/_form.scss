@@ -1,0 +1,30 @@
+.filter {
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   gap: 20px;
+
+   &__form {
+      font-family: Arial, Helvetica, sans-serif;
+      color:#F03861 ;
+      
+        }
+   }
+
+   .input {
+    &__search {
+        margin-left: 10px;
+        border: none;
+    }
+    
+   }
+
+   .gender {
+    &__select {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border: none;
+    }
+   }
+ 
+

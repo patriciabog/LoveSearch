@@ -6,11 +6,11 @@ function FilterGender({hadleFilterGender}) {
      
     return (
          <>
-      <label className="form__label " htmlFor="gender">
+      <label className="gender" htmlFor="gender">
         Gender:
       </label>
       <select
-        className="form__input-text"
+        className="gender__select"
         name="gender"
         id="gender"
         onChange={handleChange}

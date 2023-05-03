@@ -30,7 +30,7 @@ function ContactDetail({ contactFiltered }) {
         <p className="card__description">{`Email: ${contactFind.email}`}</p>
         <p className="card__description">{`Phone: ${contactFind.phone}`}</p>
     </li>
-    <Link className="link"  to="/"> 👈🏻Back</Link>
+    <Link className="link"  to="/">Back</Link>
     </>
  );
 

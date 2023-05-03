@@ -8,12 +8,15 @@ import { Route, Routes, matchPath } from 'react-router-dom';
 import ContactDetail from './ContactDetail';
 
 
+
+
 /* SECCIÓN DEL COMPONENTE */
 function App() {
   /* VARIABLES ESTADO (DATOS) */
 const [contactList, setContactList] = useState([]);
 const [genderFilter, setGenderFilter] = useState('all');
 const [contactFilter, setContactFilter] = useState('');
+
 
    /* EFECTOS (código cuando carga la página) */
 useEffect(() => {
@@ -28,6 +31,7 @@ useEffect(() => {
 const hadleFilterGender = (value) => {
   setGenderFilter(value);
 };
+
 
 const handleFilterContact = (value) => {
   setContactFilter(value)
@@ -46,17 +50,23 @@ const handleFilterContact = (value) => {
    */
    return genderFilter === "all" ? true : eachContact.gender === genderFilter;
   })
- //useLocation es una funcion que da un objeto 
+
+//reset
+ const handleReset = (gender, contact) => {
+    setContactFilter (contact);
+    setGenderFilter (gender);
+   }; 
 
 
 
   /* HTML */
   return (
-  <div className="App">
-    <h1>List of contacts</h1>
+  <div className="main">
+    <h1 className='title'>Find people that can match with you!</h1>
 
        <main>
        <Routes>
+         
           <Route 
           path='/' 
           element={ 
@@ -64,7 +74,9 @@ const handleFilterContact = (value) => {
            <Filters 
            hadleFilterGender={hadleFilterGender} 
            contactFilter={contactFilter}
-           handleFilterContact={handleFilterContact}/>
+           handleFilterContact={handleFilterContact}
+           handleReset={handleReset}
+           />
            <ListContact contactList={contactFiltered} />
           </>
         }></Route>
