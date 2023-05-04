@@ -14,10 +14,13 @@
     margin: 20px;
     color: #F03861;
     font-family: Arial, Helvetica, sans-serif;
-   
   
+   
+   
     &__desc {
-        text-decoration: wavy;
+        color: #F03861;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 5px;
     }
        
    &__img {
@@ -25,7 +28,38 @@
     width: 15rem;
    
    }
+  &__title {
+     font-weight: bold;
+     margin: 5px;
+  }
   
+}
+
+@media all and (min-width: 768px) {
+    .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 50px;
+        }
+    }
+}
+@media all and (min-width: 1200px) {
+    .list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            &__cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 10px 50px;
+            }
+        }
 }
 
 .subtitle {
@@ -37,7 +71,7 @@
 }
 
 .contact {
-   list-style: none;
+     list-style: none;
      padding: 20px;
      margin-left: 45px;
     &__img {
@@ -45,23 +79,74 @@
             width: 15rem;
     
         }
-     &__title {
-        color: #F03861;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 1.5rem;
-        margin-top: 5px;
-     }   
-     &__description {
-        color: #b68c2a;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.1rem;
-        margin-top: 5px;
-     }
+     
 }
 
+.contact2 {
+    &__title {
+            color: #F03861;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+    
+        &__description {
+            color: #b68c2a;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+}
+
+
+
+@media all and (min-width: 768px) {
+    .contact {
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        margin-top: 40px;
+        padding: 20px;
+      
+
+        &__img {
+                border-radius: 10px;
+                width: 15rem;
+                margin-left: 70px;
+            }     
+                  
+    }
+
+    .contact2 {
+        margin-left: 40px;
+      
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .contact {
+        &__img {
+            width: 20rem;
+            margin-left: 70px;
+            }
+    }
+    .contact2 {
+        &__title {
+            font-size: 2rem;
+            margin-top: 5px;
+        }
+
+        &__description {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+    }
+}
+
+
 .back {
-    margin-left: 20px;
+    margin-left: 60px;
     background-color: #E8B844;
     color: #FEF2F2;
     font-family: Arial, Helvetica, sans-serif;
@@ -70,6 +155,10 @@
     font-size: 1rem;
     padding: 5px;
     border-radius: 5px;
+}
 
-
+@media all and (min-width: 1200px){
+    .back {
+        font-size: 1.7rem;
+    }
 }

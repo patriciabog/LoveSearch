@@ -14,3 +14,9 @@
     background-color: #F03861;
     border-radius: 10px;
 }
+
+@media all and (min-width: 768px) {
+    .title {
+        font-size: 50px;
+    }
+}

@@ -21,15 +21,17 @@ function ContactDetail({ contactFiltered }) {
           alt="Foto de Francisco Korth"
           title="Foto de Francisco Korth"
         ></img>
-        <h4 className="contact__title">
+        <section className='contact2'>
+        <h4 className="contact2__title">
             {contactFind.name} {contactFind.lastname}
          </h4>
-         <p className="contact__description">{`Gender: ${contactFind.gender}`}</p>
-         <p className="contact__description">{`Country: ${contactFind.country}`}</p>
-         <p className="contact__description">{`City: ${contactFind.city}`}</p>
-         <p className="contact__description">{`Age: ${contactFind.age}`}</p>
-         <p className="contact__description">{`Email: ${contactFind.email}`}</p>
-         <p className="contact__description">{`Phone: ${contactFind.phone}`}</p>
+         <p className="contact2__description">{`Gender: ${contactFind.gender}`}</p>
+         <p className="contact2__description">{`Country: ${contactFind.country}`}</p>
+         <p className="contact2__description">{`City: ${contactFind.city}`}</p>
+         <p className="contact2__description">{`Age: ${contactFind.age}`}</p>
+         <p className="contact2__description">{`Email: ${contactFind.email}`}</p>
+         <p className="contact2__description">{`Phone: ${contactFind.phone}`}</p>
+         </section>
        </li>
    
     </>

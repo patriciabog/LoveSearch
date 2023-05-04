@@ -47,4 +47,40 @@
     }
    }
  
+@media all and (min-width: 768px) {
+    .filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+      &__reset {
+        width: 10rem;
+        font-size: 25px;
+        height: 40px;
+      }
+    }
+
+    .input {
+         &__search {
+                 margin-left: 10px;
+                 border: none;
+                 width: 15rem;
+                 height: 1.6rem;
+                 border-radius: 0.5px;
+                 padding: 0.8px;
+             }
+    
+         }
+    
+    .gender {
+         &__select {
+                 margin-left: 10px;
+                 margin-bottom: 10px;
+                 border: none;
+                 width: 15rem;
+                 height: 1.6rem;
+                 border-radius: 0.5px;
+        }
+     }
+
+}
