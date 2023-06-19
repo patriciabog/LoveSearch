@@ -7,7 +7,7 @@ import Filters from './Filters';
 import { Route, Routes } from 'react-router-dom';
 import ContactDetail from './ContactDetail';
 import heart from '../images/heart.png';
-
+import Landing from './Landing';
 
 
 
@@ -57,7 +57,7 @@ const hadleFilterAge = (value) => {
    return genderFilter === "all" ? true : eachContact.gender === genderFilter;
   })
 
-      .filter((eachContact) => {
+  .filter((eachContact) => {
       if (ageFilter === 'all') {
         return true;
       } else if (ageFilter === '20') {
@@ -73,7 +73,7 @@ const hadleFilterAge = (value) => {
       } else {
         return false;
       }
-    });
+   });
 
 //reset
  function handleReset(gender, contact, age) {
@@ -82,6 +82,7 @@ const hadleFilterAge = (value) => {
     setGenderFilter(age);
   } 
 
+  
 
 
   /* HTML */
@@ -93,9 +94,10 @@ const hadleFilterAge = (value) => {
       
        <main>
        <Routes>
+          <Route path="/" element={<Landing />} />
       
           <Route 
-          path='/' 
+          path='/app' 
           element={ 
           <>
            <Filters 

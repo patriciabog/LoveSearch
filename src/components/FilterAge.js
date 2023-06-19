@@ -7,12 +7,12 @@ function FilterAge({hadleFilterAge}) {
 
     return (
     <>
-    <label className="gender" htmlFor="gender">
+    <label className="age" htmlFor="age">
         Age:
       </label>
       <select
-        className="gender__select"
-        name="gender"
+        className="age__select"
+        name="age"
         id="age"
         onChange={handleChange}
       >

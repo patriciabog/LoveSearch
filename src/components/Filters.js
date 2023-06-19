@@ -1,6 +1,7 @@
 import FilterGender from "./FilterGender";
 import FilterContact from "./FilterContact";
 import FilterAge from "./FilterAge";
+import { Link } from "react-router-dom";
 
 
 
@@ -18,11 +19,17 @@ function Filters({hadleFilterGender, handleFilterContact, handleFilterAge, conta
                 <FilterContact handleFilterContact={handleFilterContact}
                 contactFilter={contactFilter}/>
             </form>
-            <button 
-               className="filter__reset"
+            <div className="btn">
+                 <button 
+               className="btn__reset"
                type="reset"
                onClick={handleButton} >Reset
             </button>
+             <Link   to="/">
+                <button className="btn__return">Go out</button>
+             </Link>
+            </div>
+           
         </section>
     )
 }
