@@ -1,12 +1,13 @@
 /* SECCIÓN DE IMPORT */
-import { useEffect, useState, useLocation } from 'react';
+import { useEffect, useState } from 'react';
 import getDataApi from '../services/api';
 import '../styles/App.scss';
 import ListContact from './ListContact';
 import Filters from './Filters';
-import { Route, Routes, matchPath } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import ContactDetail from './ContactDetail';
 import heart from '../images/heart.png';
+
 
 
 
@@ -17,6 +18,7 @@ function App() {
 const [contactList, setContactList] = useState([]);
 const [genderFilter, setGenderFilter] = useState('all');
 const [contactFilter, setContactFilter] = useState('');
+const [ageFilter, setAgeFilter] = useState('all');
 
 
    /* EFECTOS (código cuando carga la página) */
@@ -38,6 +40,9 @@ const handleFilterContact = (value) => {
   setContactFilter(value)
 };
 
+const hadleFilterAge = (value) => {
+  setAgeFilter(value);
+};
   /* FUNCIONES Y VARIABLES AUXILIARES PARA PINTAR EL HTML */
   const contactFiltered = contactList
   .filter((eachContact) => eachContact.name.toLocaleLowerCase().includes(contactFilter.toLocaleLowerCase())) 
@@ -52,11 +57,30 @@ const handleFilterContact = (value) => {
    return genderFilter === "all" ? true : eachContact.gender === genderFilter;
   })
 
+      .filter((eachContact) => {
+      if (ageFilter === 'all') {
+        return true;
+      } else if (ageFilter === '20') {
+        return eachContact.age >= 20 && eachContact.age < 30;
+      } else if (ageFilter === '30') {
+        return eachContact.age >= 30 && eachContact.age < 40;
+      } else if (ageFilter === '40') {
+        return eachContact.age >= 40 && eachContact.age < 50;
+      } else if (ageFilter === '50') {
+        return eachContact.age >= 50;
+      } else if (ageFilter === '60') {
+        return eachContact.age >= 60;
+      } else {
+        return false;
+      }
+    });
+
 //reset
- const handleReset = (gender, contact) => {
-    setContactFilter (contact);
-    setGenderFilter (gender);
-   }; 
+ function handleReset(gender, contact, age) {
+    setContactFilter(contact);
+    setGenderFilter(gender);
+    setGenderFilter(age);
+  } 
 
 
 
@@ -66,16 +90,17 @@ const handleFilterContact = (value) => {
     <h1 className='title'>Find people that can match with you!
    <img className='heart' src={heart} alt="heart" />
    </h1>
-
+      
        <main>
        <Routes>
-         
+      
           <Route 
           path='/' 
           element={ 
           <>
            <Filters 
            hadleFilterGender={hadleFilterGender} 
+           handleFilterAge={hadleFilterAge}
            contactFilter={contactFilter}
            handleFilterContact={handleFilterContact}
            handleReset={handleReset}
@@ -89,10 +114,11 @@ const handleFilterContact = (value) => {
            contactFiltered={contactFiltered}
           />} />
         </Routes>
-       <footer>
+       
+      </main>
+      <footer>
            <span className='copyright'>ⒸPatricia Montes de oca</span>
       </footer>
-      </main>
   </div>
   );
 }
