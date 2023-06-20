@@ -6,7 +6,6 @@ import ListContact from './ListContact';
 import Filters from './Filters';
 import { Route, Routes } from 'react-router-dom';
 import ContactDetail from './ContactDetail';
-import heart from '../images/heart.png';
 import Landing from './Landing';
 
 
@@ -82,14 +81,11 @@ const hadleFilterAge = (value) => {
     setGenderFilter(age);
   } 
 
-  
-
-
   /* HTML */
   return (
   <div className="main">
     <h1 className='title'>Find people that can match with you!
-   <img className='heart' src={heart} alt="heart" />
+   <i className='bx bx-heart heart'></i>
    </h1>
       
        <main>
@@ -119,7 +115,24 @@ const hadleFilterAge = (value) => {
        
       </main>
       <footer>
-           <span className='copyright'>ⒸPatricia Montes de oca</span>
+        <nav className='footer'>
+          <ul className="footer__one">
+               <li><a href="/">Activities for singles</a></li>
+               <li><a href="/app">Contact with them</a></li>
+               <li><a href="/app">Find by gender</a></li>
+               <li><a href="/app">Find by age</a></li>
+               <li><a href="/">Help</a></li>
+          </ul>
+          <ul className="footer__two">
+               <li><a href="/" >Twiter</a></li>
+               <li><a href="/" >Instagram</a></li>
+               <li><a href="/">Youtube</a></li>
+          </ul>
+          <ul className="footer-end">
+               <li>© Patrica M.V. 2023</li>
+               <li>Love❤️Search </li>
+          </ul>
+        </nav>
       </footer>
   </div>
   );
