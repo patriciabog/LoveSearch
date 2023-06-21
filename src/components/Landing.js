@@ -10,7 +10,7 @@ function Landing() {
       <div className='landing'>
          <h1 className='landing__title'>Love<span className='landing__title__span'>Search</span></h1>
       <Link to='/app'>
-          <button className='landing__btn'>Get started</button>
+          <button className='landing__btn'>Get started!</button>
       </Link>
       </div>
        

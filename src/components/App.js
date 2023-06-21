@@ -7,9 +7,7 @@ import Filters from './Filters';
 import { Route, Routes } from 'react-router-dom';
 import ContactDetail from './ContactDetail';
 import Landing from './Landing';
-
-
-
+import imgFooter from '../images/imgFooter.png';
 
 /* SECCIÓN DEL COMPONENTE */
 function App() {
@@ -28,12 +26,10 @@ useEffect(() => {
   });
 }, []);
  
-
   /* FUNCIONES HANDLER */
 const hadleFilterGender = (value) => {
   setGenderFilter(value);
 };
-
 
 const handleFilterContact = (value) => {
   setContactFilter(value)
@@ -74,7 +70,7 @@ const hadleFilterAge = (value) => {
       }
    });
 
-//reset
+//Reset
  function handleReset(gender, contact, age) {
     setContactFilter(contact);
     setGenderFilter(gender);
@@ -115,6 +111,10 @@ const hadleFilterAge = (value) => {
        
       </main>
       <footer>
+        <div className='box-footer'>
+          <h3 className='box-footer__title'>Recommended by singles</h3>
+            <img src={imgFooter} alt="img footer" className='box-footer__img' />
+        </div>
         <nav className='footer'>
           <ul className="footer__one">
                <li><a href="/" className='footer__one__link'>Activities for singles</a></li>

@@ -14,8 +14,11 @@ function Filters({hadleFilterGender, handleFilterContact, handleFilterAge, conta
         <section className="filter">
          
             <form className="filter__form">
-                <FilterGender hadleFilterGender={hadleFilterGender}/>
-                 <FilterAge hadleFilterAge={handleFilterAge}/>
+                <div className="filter__form__select">
+                   <FilterGender hadleFilterGender={hadleFilterGender}/>
+                   <FilterAge hadleFilterAge={handleFilterAge}/>
+                </div>
+                
                 <FilterContact handleFilterContact={handleFilterContact}
                 contactFilter={contactFilter}/>
             </form>

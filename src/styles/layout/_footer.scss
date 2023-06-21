@@ -1,3 +1,19 @@
+.box-footer {
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        font-size: 1rem;
+        color: #474E61;
+    }
+    &__img {
+        width: 9rem;
+        height: 5rem;
+        margin: 1rem;
+    }
+}
 .footer {
     background-color: rgb(248, 248, 248) ;
     //height: 10vh;
@@ -12,10 +28,10 @@
         text-align: start;
         line-height: 1.2;
         padding: 0.5rem;
+        font-size: 0.8rem;
         &__link {
             color: #F03861;
             text-decoration: none;
-            font-size: 0.8rem;  
         }
     }
     &__two {
@@ -23,10 +39,10 @@
         line-height: 1.2;
         padding: 0.5rem;
         margin-bottom: 1rem;
+        font-size: 0.8rem;
         &__link2 {
             color: #F03861;
             text-decoration: none;
-            font-size: 0.8rem;
             margin-right: 2rem;
             &__iconT {
                 background-color: #42C2FF;
@@ -59,4 +75,69 @@
             color: #474E68;
        }
   
+}
+
+@media all and (min-width: 768px) {
+    .box-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem 2.5rem;
+        &__title {
+                font-size: 1.5rem;
+                margin-left: 2rem;
+            }
+        &__img {
+            width: 13rem;
+            height: 7rem;
+            margin: 1rem;
+        }
+    }
+    .footer {
+        display: flex;
+        flex-direction: row;
+        padding: 4rem;
+
+        &__one {
+            font-size: 1rem;
+        }
+        &__two {
+            font-size: 1rem;
+        }
+        &__end {
+            font-size: 1rem;
+        }
+    }  
+    
+}
+@media all and (min-width: 1200px) {
+    .box-footer {
+            padding: 1rem 3rem;
+    
+            &__title {
+                font-size: 2rem;
+                margin-left: 5rem;
+            }
+    
+            &__img {
+                width: 25rem;
+                height: 14rem;
+                margin: 1rem;
+            }
+        }
+    .footer {
+        padding: 3rem 6rem;
+
+        &__one {
+            font-size: 1.5rem;
+        }
+
+        &__two {
+            font-size: 1.5rem;
+        }
+
+        &__end {
+            font-size: 1.5rem;
+        }
+    }
+
 }

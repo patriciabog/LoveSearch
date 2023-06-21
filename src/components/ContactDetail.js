@@ -12,7 +12,7 @@ function ContactDetail({ contactFiltered }) {
  return (
     <>
      <h2 className='subtitle'>Profile Information</h2>
-      <Link className="back"  to="/">Back</Link>
+      <Link className="back"  to="/app"><i className='bx bx-left-arrow-alt back__icon'></i> </Link>
      <li className="contact">
         <img
           className="contact__img"
