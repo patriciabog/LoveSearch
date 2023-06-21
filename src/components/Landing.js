@@ -26,7 +26,7 @@ function Landing() {
           </article>
           <article className="box1__land">
               <i className='bx bxs-drink box1__land__icon' ></i>
-              <p className="box1__land__p">Eventos temáticos para tener citas inolvidables</p>
+              <p className="box1__land__p">Theme events for unforgettable dates</p>
           </article>
      </div>
      <div className='box2'>

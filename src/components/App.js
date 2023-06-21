@@ -117,20 +117,20 @@ const hadleFilterAge = (value) => {
       <footer>
         <nav className='footer'>
           <ul className="footer__one">
-               <li><a href="/">Activities for singles</a></li>
-               <li><a href="/app">Contact with them</a></li>
-               <li><a href="/app">Find by gender</a></li>
-               <li><a href="/app">Find by age</a></li>
-               <li><a href="/">Help</a></li>
+               <li><a href="/" className='footer__one__link'>Activities for singles</a></li>
+               <li><a href="/app" className='footer__one__link'>Contact with them</a></li>
+               <li><a href="/app" className='footer__one__link'>Find by gender</a></li>
+               <li><a href="/app" className='footer__one__link'>Find by age</a></li>
+               <li><a href="/" className='footer__one__link'>Help</a></li>
           </ul>
           <ul className="footer__two">
-               <li><a href="/" >Twiter</a></li>
-               <li><a href="/" >Instagram</a></li>
-               <li><a href="/">Youtube</a></li>
+               <li><a href="/" className='footer__two__link2'>Twiter <i className='bx bxl-twitter footer__two__link2__iconT'></i></a></li>
+               <li><a href="/" className='footer__two__link2' >Instagram <i class='bx bxl-instagram-alt footer__two__link2__iconI'></i></a></li>
+               <li><a href="/" className='footer__two__link2'>Youtube <i className='bx bxl-youtube footer__two__link2__iconY'></i></a></li>
           </ul>
-          <ul className="footer-end">
-               <li>© Patrica M.V. 2023</li>
+          <ul className="footer__end">
                <li>Love❤️Search </li>
+               <li>© Patrica M.V. 2023</li>
           </ul>
         </nav>
       </footer>

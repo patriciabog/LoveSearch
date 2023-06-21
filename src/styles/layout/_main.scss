@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
+    background-color:#EEEEEE;
     &__cards {
     list-style: none;
     
@@ -84,6 +84,7 @@
 }
 
 .contact2 {
+  
     &__title {
             color: #F03861;
             font-family: Arial, Helvetica, sans-serif;
