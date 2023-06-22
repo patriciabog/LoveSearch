@@ -103,13 +103,12 @@
  
 @media all and (min-width: 768px) {
     .filter {
-       
       &__form {
-          padding: 2rem;
-        
+        // padding: 2rem;
           &__select {
-              display: flex;
-              flex-direction: row;
+               display: grid;
+               grid-template-columns: 2fr;
+               grid-template-rows: 1fr;
           }   
       }
     }
@@ -130,16 +129,17 @@
     }
     
     .input {
-      padding: 0.7rem;
-      font-size: 1.7rem;
-      margin: 2rem;
+      padding: 0.5rem;
+      font-size: 1.5rem;   
+  
       &__search {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
+        width: 20rem;
       }
     }
     .gender {
         &__select {
-          font-size: 1.7rem;
+          font-size: 1.5rem;
           width: 20rem;
           height: 4rem;
           padding: 0.5rem 1.5rem;
@@ -148,7 +148,7 @@
     }
     .age {
       &__select {
-          font-size: 1.7rem;
+          font-size: 1.5rem;
           width: 20rem;
           height: 4rem;
           padding: 0.5rem 1.5rem;
@@ -156,4 +156,49 @@
       }
 
     }
+}
+
+@media all and (min-width: 1200px) {
+    .filter {
+    
+        &__form {
+          padding: 1rem;
+    
+          &__select {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    .input {
+      padding: 0.7rem;
+      font-size: 1.7rem;
+      margin: 1rem;
+
+      &__search {
+        font-size: 1.7rem;
+      }
+    }
+
+    .gender {
+      &__select {
+        font-size: 1.3rem;
+        width: 20rem;
+        height: 4rem;
+        padding: 0.5rem 1.5rem;
+       // margin: 0.5rem;
+      }
+    }
+
+    .age {
+      &__select {
+        font-size: 1.3rem;
+        width: 20rem;
+        height: 4rem;
+        padding: 0.5rem 1.5rem;
+       // margin: 0.5rem;
+      }
+
+    }
+             
 }

@@ -12,8 +12,9 @@ function FilterAge({hadleFilterAge}) {
         name="age"
         id="age"
         onChange={handleChange}
+        value="default"
       >
-         <option value="Select by gender">Select by Age</option>
+         <option value="default">Select by Age</option>
         <option value="all">All</option>
         <option value="20">20+ </option>
         <option value="30">30+ </option>

@@ -7,7 +7,9 @@ import { Link } from "react-router-dom";
 
 function Filters({hadleFilterGender, handleFilterContact, handleFilterAge, contactFilter, handleReset}) {
     const handleButton = () => {
-   handleReset("all", "");
+   handleReset("all", "all", "");
+
+    
   };
     
     return (
@@ -15,12 +17,15 @@ function Filters({hadleFilterGender, handleFilterContact, handleFilterAge, conta
          
             <form className="filter__form">
                 <div className="filter__form__select">
-                   <FilterGender hadleFilterGender={hadleFilterGender}/>
-                   <FilterAge hadleFilterAge={handleFilterAge}/>
+                    <div>
+                        <FilterGender hadleFilterGender={hadleFilterGender}/>
+                        <FilterAge hadleFilterAge={handleFilterAge}/>
+                    </div>
+                    <FilterContact handleFilterContact={handleFilterContact}
+                    contactFilter={contactFilter}/>
                 </div>
                 
-                <FilterContact handleFilterContact={handleFilterContact}
-                contactFilter={contactFilter}/>
+                
             </form>
             <div className="btn">
                  <button 
@@ -29,7 +34,7 @@ function Filters({hadleFilterGender, handleFilterContact, handleFilterAge, conta
                onClick={handleButton} >Reset
             </button>
              <Link   to="/">
-                <button className="btn__return">Go out</button>
+                <button className="btn__return">Back</button>
              </Link>
             </div>
            

@@ -1,4 +1,4 @@
-/* SECCIÓN DE IMPORT */
+/*  IMPORT SECTION*/
 import { useEffect, useState } from 'react';
 import getDataApi from '../services/api';
 import '../styles/App.scss';
@@ -9,16 +9,16 @@ import ContactDetail from './ContactDetail';
 import Landing from './Landing';
 import imgFooter from '../images/imgFooter.png';
 
-/* SECCIÓN DEL COMPONENTE */
+/* COMPONENT SECCTION */
 function App() {
-  /* VARIABLES ESTADO (DATOS) */
+  /* VARIABLES ESTATE (DATA) */
 const [contactList, setContactList] = useState([]);
 const [genderFilter, setGenderFilter] = useState('all');
 const [contactFilter, setContactFilter] = useState('');
 const [ageFilter, setAgeFilter] = useState('all');
 
 
-   /* EFECTOS (código cuando carga la página) */
+   /* EFECTS (code when load the page) */
 useEffect(() => {
   getDataApi().then((cleanData) => {
     console.log(cleanData);
@@ -26,19 +26,19 @@ useEffect(() => {
   });
 }, []);
  
-  /* FUNCIONES HANDLER */
+  /* HANDLER FUNCTION */
 const hadleFilterGender = (value) => {
   setGenderFilter(value);
 };
+const hadleFilterAge = (value) => {
+  setAgeFilter(value);
+}; 
 
 const handleFilterContact = (value) => {
   setContactFilter(value)
 };
 
-const hadleFilterAge = (value) => {
-  setAgeFilter(value);
-};
-  /* FUNCIONES Y VARIABLES AUXILIARES PARA PINTAR EL HTML */
+  /* FUNCTIONS AND VARIABLES  TO PAINT HTML */
   const contactFiltered = contactList
   .filter((eachContact) => eachContact.name.toLocaleLowerCase().includes(contactFilter.toLocaleLowerCase())) 
   
@@ -71,10 +71,10 @@ const hadleFilterAge = (value) => {
    });
 
 //Reset
- function handleReset(gender, contact, age) {
-    setContactFilter(contact);
+ function handleReset(gender, age, contact) {
     setGenderFilter(gender);
-    setGenderFilter(age);
+    setAgeFilter(age);
+     setContactFilter(contact);
   } 
 
   /* HTML */
@@ -125,7 +125,7 @@ const hadleFilterAge = (value) => {
           </ul>
           <ul className="footer__two">
                <li><a href="/" className='footer__two__link2'>Twiter <i className='bx bxl-twitter footer__two__link2__iconT'></i></a></li>
-               <li><a href="/" className='footer__two__link2' >Instagram <i class='bx bxl-instagram-alt footer__two__link2__iconI'></i></a></li>
+               <li><a href="/" className='footer__two__link2' >Instagram <i className='bx bxl-instagram-alt footer__two__link2__iconI'></i></a></li>
                <li><a href="/" className='footer__two__link2'>Youtube <i className='bx bxl-youtube footer__two__link2__iconY'></i></a></li>
           </ul>
           <ul className="footer__end">
