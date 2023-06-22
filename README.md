@@ -11,7 +11,9 @@ This is a project made with a lot of LOVE. Sometimes is difficult to find the ri
 - REACT
 - JavaScript
 
+## Screenshots 🖥
 
+![LoveSearch](./src/images/loveSearch.png)
 
 ## Installation
 
