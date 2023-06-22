@@ -1,6 +1,6 @@
 
 
-function FilterAge({hadleFilterAge}) {
+function FilterAge({hadleFilterAge, ageFilter}) {
       const handleChange = (ev) => {
         hadleFilterAge(ev.target.value);
      };
@@ -12,9 +12,9 @@ function FilterAge({hadleFilterAge}) {
         name="age"
         id="age"
         onChange={handleChange}
-        value="default"
+        value={ageFilter}
       >
-         <option value="default">Select by Age</option>
+        <option className="default">Select by Age</option>
         <option value="all">All</option>
         <option value="20">20+ </option>
         <option value="30">30+ </option>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 
-function Filters({hadleFilterGender, handleFilterContact, handleFilterAge, contactFilter, handleReset}) {
+function Filters({hadleFilterGender, handleFilterContact, genderFilter, ageFilter, handleFilterAge, contactFilter, handleReset}) {
     const handleButton = () => {
    handleReset("all", "all", "");
 
@@ -16,10 +16,10 @@ function Filters({hadleFilterGender, handleFilterContact, handleFilterAge, conta
         <section className="filter">
          
             <form className="filter__form">
-                <div className="filter__form__select">
-                    <div>
-                        <FilterGender hadleFilterGender={hadleFilterGender}/>
-                        <FilterAge hadleFilterAge={handleFilterAge}/>
+                <div className="filter__form__box">
+                    <div className="filter__form__box__select">
+                        <FilterGender hadleFilterGender={hadleFilterGender} genderFilter={genderFilter}/>
+                        <FilterAge hadleFilterAge={handleFilterAge} ageFilter={ageFilter}/>
                     </div>
                     <FilterContact handleFilterContact={handleFilterContact}
                     contactFilter={contactFilter}/>
