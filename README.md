@@ -13,7 +13,7 @@ This is a project made with a lot of LOVE. Sometimes is difficult to find the ri
 
 ## Screenshots 🖥
 
-![LoveSearch](./src/images/loveSearch.png)
+![LoveSearch](./src/images/loveSearch.png | width=300px)
 
 ## Installation
 
