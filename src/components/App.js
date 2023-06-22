@@ -74,7 +74,7 @@ const handleFilterContact = (value) => {
  function handleReset(gender, age, contact) {
     setGenderFilter(gender);
     setAgeFilter(age);
-     setContactFilter(contact);
+    setContactFilter(contact);
   } 
 
   /* HTML */
