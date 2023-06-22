@@ -13,7 +13,9 @@ This is a project made with a lot of LOVE. Sometimes is difficult to find the ri
 
 ## Screenshots 🖥
 
-![LoveSearch](./src/images/loveSearch.png | width=300px)
+<img src="./src/images/loveSearch.png" alt="Texto alternativo" width="300">
+
+
 
 ## Installation
 
