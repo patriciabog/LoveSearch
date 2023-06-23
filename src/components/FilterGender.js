@@ -1,11 +1,12 @@
 
 
-function FilterGender({hadleFilterGender, genderFilter}) {
+function FilterGender({ handleFilterGender, genderFilter }) {
 
-     const handleChange = (ev) => {
-        hadleFilterGender(ev.target.value);
+    const handleChange = (ev) => {
+        ev.preventDefault();
+        handleFilterGender(ev.target.value);
      };
-     
+
     return (
     <>
       <select
@@ -13,9 +14,9 @@ function FilterGender({hadleFilterGender, genderFilter}) {
         name="gender"
         id="gender"
         onChange={handleChange}
-        value= {genderFilter}
+        value={genderFilter}
        >
-        <option className="value">Select by Gender</option>
+        <option selected value="" >Select by Gender 🔻</option>
         <option value="all">All</option>
         <option value="female">Female </option>
         <option value="male">Male </option>

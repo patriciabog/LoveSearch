@@ -14,7 +14,7 @@ function FilterContact({contactFilter, handleFilterContact}) {
             type="text"
             name="name"
             id="name" 
-            placeholder=" Francisco"
+            placeholder=" Isabelle"
             onInput={handleInput}
             value={contactFilter}
           />

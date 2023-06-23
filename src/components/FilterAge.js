@@ -1,20 +1,23 @@
 
 
-function FilterAge({hadleFilterAge, ageFilter}) {
+function FilterAge({ handleFilterAge, ageFilter }) {
+      
       const handleChange = (ev) => {
-        hadleFilterAge(ev.target.value);
+        ev.preventDefault();
+       
+        handleFilterAge(ev.target.value);
      };
 
     return (
     <>
-         <select
+        <select
         className="age__select"
         name="age"
         id="age"
         onChange={handleChange}
         value={ageFilter}
-      >
-        <option className="default">Select by Age</option>
+        >
+        <option selected value="" >Select by Age 🔻</option>
         <option value="all">All</option>
         <option value="20">20+ </option>
         <option value="30">30+ </option>

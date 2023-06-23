@@ -69,19 +69,20 @@
     justify-content: center;
     align-items: center;
     &__preIcon {
-       margin-left: 2rem;
         background-color: #EEEEEE;
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
     }
     &__search {
         font-size: 1rem;
-       margin-top: 0.5rem;
+        margin-top: 0.5rem;
         border: none;
         padding: 0.5rem 1rem;
-        //border-radius: 5px;
-        //border-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
         background-color: #EEEEEE;
-        width: 20rem;
+        width: 10rem;
     }
     
    }

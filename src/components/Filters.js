@@ -4,12 +4,12 @@ import FilterAge from "./FilterAge";
 import { Link } from "react-router-dom";
 
 
+function Filters({handleFilterGender, handleFilterContact, handleFilterAge, contactFilter, handleReset, ageFilter, genderFilter}) {
 
-function Filters({hadleFilterGender, handleFilterContact, genderFilter, ageFilter, handleFilterAge, contactFilter, handleReset}) {
-    const handleButton = () => {
-   handleReset("all", "all", "");
-
-    
+    const handleButton = (ev) => {
+    ev.preventDefault();
+     handleReset("", "", "");
+   
   };
     
     return (
@@ -18,11 +18,11 @@ function Filters({hadleFilterGender, handleFilterContact, genderFilter, ageFilte
             <form className="filter__form">
                 <div className="filter__form__box">
                     <div className="filter__form__box__select">
-                        <FilterGender hadleFilterGender={hadleFilterGender} genderFilter={genderFilter}/>
-                        <FilterAge hadleFilterAge={handleFilterAge} ageFilter={ageFilter}/>
+                        <FilterGender handleFilterGender={handleFilterGender} handleReset={handleReset} genderFilter={genderFilter} />
+                        <FilterAge handleFilterAge={handleFilterAge} handleReset={handleReset} ageFilter={ageFilter}/>
                     </div>
-                    <FilterContact handleFilterContact={handleFilterContact}
-                    contactFilter={contactFilter}/>
+                        <FilterContact handleFilterContact={handleFilterContact}
+                    contactFilter={contactFilter} handleReset={handleReset}/>
                 </div>
                 
                 
@@ -34,7 +34,8 @@ function Filters({hadleFilterGender, handleFilterContact, genderFilter, ageFilte
                onClick={handleButton} >Reset
             </button>
              <Link   to="/">
-                <button className="btn__return">Back</button>
+                <button 
+                className="btn__return">Back</button>
              </Link>
             </div>
            

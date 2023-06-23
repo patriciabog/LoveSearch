@@ -13,24 +13,24 @@ import imgFooter from '../images/imgFooter.png';
 function App() {
   /* VARIABLES ESTATE (DATA) */
 const [contactList, setContactList] = useState([]);
-const [genderFilter, setGenderFilter] = useState('all');
+const [genderFilter, setGenderFilter] = useState('');
+const [ageFilter, setAgeFilter] = useState('');
 const [contactFilter, setContactFilter] = useState('');
-const [ageFilter, setAgeFilter] = useState('all');
 
 
    /* EFECTS (code when load the page) */
 useEffect(() => {
   getDataApi().then((cleanData) => {
-    console.log(cleanData);
+   // console.log(cleanData);
     setContactList(cleanData);
   });
 }, []);
  
   /* HANDLER FUNCTION */
-const hadleFilterGender = (value) => {
+const handleFilterGender = (value) => {
   setGenderFilter(value);
 };
-const hadleFilterAge = (value) => {
+const handleFilterAge = (value) => {
   setAgeFilter(value);
 }; 
 
@@ -93,8 +93,8 @@ const handleFilterContact = (value) => {
           element={ 
           <>
            <Filters 
-           hadleFilterGender={hadleFilterGender} 
-           handleFilterAge={hadleFilterAge}
+           handleFilterGender={handleFilterGender} genderFilter={genderFilter}
+           handleFilterAge={handleFilterAge} ageFilter={ageFilter}
            contactFilter={contactFilter}
            handleFilterContact={handleFilterContact}
            handleReset={handleReset}
