@@ -21,9 +21,9 @@ function Filters({handleFilterGender, handleFilterContact, handleFilterAge, cont
                         <FilterGender handleFilterGender={handleFilterGender} handleReset={handleReset} genderFilter={genderFilter} />
                         <FilterAge handleFilterAge={handleFilterAge} handleReset={handleReset} ageFilter={ageFilter}/>
                     </div>
-                    <div className="filter__form__box__contact">
+                    <div   className="filter__form__box__contact">
                         <FilterContact handleFilterContact={handleFilterContact}
-                    contactFilter={contactFilter} handleReset={handleReset}/>
+                        contactFilter={contactFilter} handleReset={handleReset}/>
                     </div>
                         
                 </div>

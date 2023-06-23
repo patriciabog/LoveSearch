@@ -20,7 +20,9 @@ function ContactDetail({ contactFiltered }) {
      <h2 className='subtitle'>Profile Information</h2>
       <Link className="back"  to="/app"><i className='bx bx-left-arrow-alt back__icon'></i> </Link>
      <li className="contact">
+
          <i className={`bx ${isClicked ? 'bxs-heart' : 'bx-heart'}`}  onClick={handleClick}></i>
+         
         <img
           className="contact__img"
           //inside braces we put the image property of the object
