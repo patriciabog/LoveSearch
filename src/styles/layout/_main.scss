@@ -32,6 +32,25 @@
   } 
 }
 
+.bxs-heart {
+    display: inline-block;
+    cursor: pointer;
+    color: #F03861;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    margin-bottom: 0.1rem;
+    
+}
+
+.bx-heart {
+    cursor: pointer;
+    color: #F03861;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    margin-bottom: 0.1rem;
+   
+}
+
 @media all and (min-width: 768px) {
     .list {
         display: flex;
@@ -44,7 +63,20 @@
             gap: 10px 50px;
         }
     }
+        .bxs-heart {
+            font-size: 2.7rem;
+            padding: 0.5rem;
+            margin-bottom: 18rem;
+    
+        }
+    
+        .bx-heart {
+            font-size: 2.7rem;
+            padding: 0.5rem;
+            margin-bottom: 18rem;
+        }
 }
+
 @media all and (min-width: 1200px) {
     .list {
             display: flex;
@@ -57,7 +89,21 @@
                 gap: 10px 50px;
             }
         }
+        .bxs-heart {
+            font-size: 4rem;
+            margin-right: 1rem;
+            margin-bottom: 22rem;
+
+        }
+
+        .bx-heart {
+            font-size: 4rem;
+            padding: 0.5rem;
+            margin-bottom: 22rem;
+        }
 }
+
+
 
 .subtitle {
     text-align: center;
@@ -93,7 +139,7 @@
             color: #F03861;
             font-weight: bold;
             font-size: 1.5rem;
-            margin-top: 1rem;
+             margin-top: 1rem;
         }
     
         &__description {
@@ -113,11 +159,9 @@
     .contact {
         display: flex;
         flex-direction: row;
-        padding: 3rem;
-        margin: 4rem;
+   
         &__img {
-                border-radius: 10px;
-                width: 15rem;
+            width: 15rem;
             }               
     }
 
@@ -128,7 +172,6 @@
 
 @media all and (min-width: 1200px) {
     .contact {
-        margin: 6rem;
         &__img {
             width: 20rem;
             }
@@ -162,12 +205,21 @@
 @media all and (min-width: 768px) {
     .back {
             font-size: 2rem;
+        &__icon {
+            width: 7rem;
+            height: 2.5rem;
+        }
         }
     }
 
 
 @media all and (min-width: 1200px){
     .back {
-        font-size: 1.7rem;
+        &__icon {
+            font-size: 3.5rem;
+            width: 12rem;
+            height: 3.5rem;
+            padding-left: 0.5rem;
+        }
     }
 }

@@ -139,7 +139,7 @@
               grid-template-rows: 1fr;
             &__select {
                   display: grid;
-                    grid-template-columns: 2fr 2fr;
+                  grid-template-columns: 2fr 2fr;
             }
           }   
       }
@@ -192,23 +192,30 @@
 
 @media all and (min-width: 1200px) {
     .filter {
-    
         &__form {
           padding: 1rem;
-    
-          &__select {
+          
+          &__box {
             display: flex;
             flex-direction: row;
+
+          &__contact {
+            margin-top: -2rem;
+          }
+        
           }
         }
       }
     .input {
-      padding: 0.7rem;
-      font-size: 1.7rem;
-      margin: 1rem;
+     
+      &__preIcon {
+         padding: 0.8rem;
+      }
 
       &__search {
-        font-size: 1.7rem;
+         font-size: 1.5rem;
+         padding: 0.8rem;
+       
       }
     }
 

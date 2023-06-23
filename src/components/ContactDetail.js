@@ -1,25 +1,32 @@
 import { matchPath, useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+
 
 function ContactDetail({ contactFiltered }) {
+   const [isClicked, setIsClicked] = useState(false);
  const { pathname } = useLocation()
    const dataUrl = matchPath('/contact/:id', pathname);
    const contactId = dataUrl !== null ? dataUrl.params.id : null;
 
    const contactFind = contactFiltered.find((eachContact) => eachContact.id === contactId
    );
+      const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
 
  return (
     <>
      <h2 className='subtitle'>Profile Information</h2>
       <Link className="back"  to="/app"><i className='bx bx-left-arrow-alt back__icon'></i> </Link>
      <li className="contact">
+         <i className={`bx ${isClicked ? 'bxs-heart' : 'bx-heart'}`}  onClick={handleClick}></i>
         <img
           className="contact__img"
-          //dentro de llaves ponemos la propiedad imagen del objeto
+          //inside braces we put the image property of the object
           src={contactFind.image}
-          alt="Foto de Francisco Korth"
-          title="Foto de Francisco Korth"
+          alt=""
+          title=""
         ></img>
         <section className='contact2'>
         <h4 className="contact2__title">
