@@ -110,6 +110,7 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
+     position: relative;
      &__icon {
           background-color: #F03861;
           color: white;
@@ -122,6 +123,9 @@
      font-family: Verdana, Geneva, Tahoma, sans-serif;
      padding: 0.5rem;
      line-height: 1.3;
+     text-align: center;
+    
+
     }
    }
 }

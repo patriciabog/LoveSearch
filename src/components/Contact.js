@@ -2,14 +2,10 @@ import { Link } from "react-router-dom";
 
 
 function Contact({ eachContact }) {
-  
   console.log(eachContact);
-
-   
     return (       
            <Link to={`/contact/${eachContact.id}`}>
-              <li className="card">
-                
+              <li className="card"> 
              <img
               className="card__img"
               src={eachContact.image}
